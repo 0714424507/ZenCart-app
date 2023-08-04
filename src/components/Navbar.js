@@ -16,6 +16,11 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
+          <Link className="navbar-link" to="/cart">
+            <i className="fa-sharp fa fa-house-user fa-bounce"></i> Cart
+          </Link>
+        </li>
+        <li>
           <Link className="navbar-link" to="/wishlist">
             <i className="fas fa-heart"></i> Wishlist
           </Link>
