@@ -1,10 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Categories from './components/Categories';
-import HelpLinks from './components/HelpLinks';
-import TCS from './components/TCS'; 
-import About from './components/About'; 
-import Contact from './components/Contact';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Topbar from './components/Topbar';
@@ -17,14 +13,8 @@ const App = () => {
       <Topbar/>
       <Navbar />
       <Homepage/>
-        <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/help/*" element={<HelpLinks />}>
-            <Route index element={<TCS />} />
-            <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
-          </Route>
+
           <Route path="/categories/*" element={<Categories />}>
             <Route index element={<WomenFashion />} />
             <Route path="womens-fashion" element={<WomenFashion />} />
@@ -37,15 +27,12 @@ const App = () => {
           </Route>
         </Routes>
         {/* Your other components and content here */}
-> main
       </div>
     </Router>
   );
 };
 
-const Home = () => {
-  return <div>Home Page Content</div>;
-};
+
 
 const WomenFashion = () => {
   return <div>Women's Fashion Category Page</div>;
