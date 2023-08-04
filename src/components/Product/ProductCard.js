@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AddToCartButton from './AddToCartButton';
+import './ProductCard.css';
 
 const ProductCard = () => {
   const [products, setProducts] = useState([]);
@@ -12,11 +13,13 @@ const ProductCard = () => {
   }, []);
 
   return (
-    <div>
+    <div className='product-card'>
       {products.map((product) => (
-        <div key={product.id} className="product-card">
-          <img src={product.image} alt={product.name} className="product-image" />
-          <h2 className="product-name">{product.name}</h2>
+        <div key={product.id} className='product-id'>
+          <a href={`/product/${product.id}`}><img src={product.image} alt={product.name} className="product-image" /></a>
+          <h2 className="product-name">
+            <a className="product-link" href={`/product/${product.id}`}>{product.name}</a>
+          </h2>
           <p className="product-price">${product.price}</p>
           <AddToCartButton product={product} />
         </div>
@@ -24,5 +27,21 @@ const ProductCard = () => {
     </div>
   );
 };
+
+//   return (
+//     <div className='product-card'>
+//       {products.map((product) => (
+//         <div key={product.id} className='product-id'>
+//           <img src={product.image} alt={product.name} className="product-image" />
+//           <h2 className="product-name">
+//             <a className="product-link" href={`/product/${product.id}`}>{product.name}</a>
+//           </h2>
+//           <p className="product-price">${product.price}</p>
+//           <AddToCartButton product={product} />
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
 
 export default ProductCard;
