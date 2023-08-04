@@ -1,5 +1,7 @@
 import React from 'react'
 import img1 from "./images/img1.png"
+import { Link } from "react-router-dom";
+import ProductGrid from './Product/ProductGrid';
 
 function Homepage(){
     return(
@@ -15,11 +17,14 @@ function Homepage(){
         <button>Search</button>
       </div>
       <div className='cart'>
-      <i className="fas fa-shopping-cart fa-2x"></i>
+      <Link className="navbar-link" to="/cart">
+            <i className="fas fa-shopping-cart fa-2x"></i> 
+       </Link>
        </div>
         </div>
 
         <div className='container2'>
+          <ProductGrid/>
         </div>
         </div>
     );
