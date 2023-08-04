@@ -4,17 +4,31 @@
 
 
 body {
-  background-color: #E3DED3;
+  background-color: #fcfbf9;
 }
 body {
-  background-color: #E3DED3;
+  background-color: #fcfbf9;
 }
+
+.topbar {
+  background-color: rgb(175, 54, 54);
+  color: white;
+  height: 70px; /* Adjust the height to your preference */
+  display: flex;
+  align-items: center;
+  padding: 1rem; /* Add horizontal padding to center the content */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 
 .navbar {
   display: flex;
   justify-content: flex-end;
-  
   padding: 1px; /* Adjust the padding as needed */
+
+  /* Add a bottom border to the navbar */
+  border-bottom: 2px solid black;
 }
 
 .navbar-list {
@@ -34,5 +48,59 @@ body {
   margin-right: 0px;
   margin-top: 20px;
   color: black;
+  font-size: 19px;
+  text-decoration: none; /* Remove the underline from the text */
+
+  /* Add a border-bottom for hover effect */
+  border-bottom: 2px black; /* Initially transparent */
+  transition: border-bottom-color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: rgb(204, 127, 224); /* Change to the desired color on hover */
+}
+
+/* homepage */
+
+/* styles.css (or styles.module.css if using CSS modules) */
+
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10px;
+  margin-top: 20px;
+  padding: 2rem;
+  background-color: #f5efef;
+  
+}
+
+.search {
+  display: flex; /* Use flexbox to align items in a row */
+  align-items: center; /* Vertically center the items */
+}
+
+.search input {
+  padding: 5px 50px;
+  margin-right: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search button {
+  padding: 5px 20px;
+  background-color: #475d76; /* Adjust the button background color as needed */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart {
+  display: inline-block;
+  margin-right: 60px;
+  margin-left: 0px;
+  margin-top: 20px;
+  color: rgb(37, 14, 37);
   font-size: 20px;
 }
