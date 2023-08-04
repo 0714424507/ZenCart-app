@@ -1,0 +1,42 @@
+.product-card {
+    margin-left: 8%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns, each taking equal space */
+    gap: 40px; 
+  }
+  .product-name{
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+  .product-link{
+    text-decoration: none;
+    color: black;
+  }
+
+  .product-link:hover{
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(203, 203, 203);
+    padding: 5px 20px;
+    border-radius: 10px;
+    color: rgb(102, 102, 102);
+  }
+ 
+  .product-id{
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border: solid rgb(239, 239, 239);
+  }
+  
+  .product-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  
+  
+  
+
+ 
