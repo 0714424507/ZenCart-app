@@ -1,7 +1,10 @@
 import React from 'react'
 import img1 from "./images/img1.png"
 import { Link } from "react-router-dom";
+import Categories from './Categories';
 import ProductGrid from './Product/ProductGrid';
+import LoadMore from './Product/LoadMore';
+import Pagination from './Product/Pagination';
 
 function Homepage(){
     return(
@@ -24,7 +27,10 @@ function Homepage(){
         </div>
 
         <div className='container2'>
+          <Categories/>
+          <Pagination/>
           <ProductGrid/>
+          <LoadMore/>
         </div>
         </div>
     );

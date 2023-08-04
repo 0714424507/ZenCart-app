@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './Categories.css';
 
 const Categories = () => {
   return (
-    <div>
+    <div className = 'sidebar'>
       <h2>Categories</h2>
       <ul>
         <li>
