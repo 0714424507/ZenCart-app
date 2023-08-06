@@ -1,0 +1,136 @@
+/* ABOUT US */
+.aboutus {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .welcome{
+    font-style: italic;
+  }
+  .mission{
+    font-weight: bold;
+    background-color: aliceblue;
+  }
+
+
+  /* HELP PAGE */
+  .help {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .help-buyers, .help-sellers {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .help-buyers {
+    margin-right: 100px; 
+  }
+  
+  .buyers, .sellers {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .help-p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  /* TERMS */
+  .terms {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .terms-buyers, .terms-sellers {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .terms-buyers {
+    margin-right: 100px; 
+  }
+  
+  .buyers, .sellers {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+.terms-ul {
+    padding-left: 20px;
+  }
+  
+  /* CONTACT PAGE */
+  .contact-us {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .contact-us h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-us p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-details {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .contact-info {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .contact-info h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .contact-info p {
+    font-size: 16px;
+    margin: 0;
+  }
+  
