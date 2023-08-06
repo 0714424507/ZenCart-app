@@ -1,12 +1,15 @@
 import React from 'react';
 import './AboutUs.css';
+import Sidebar from './SideBar';
 
 const Terms = () => {
   return (
+    <div>
+    <Sidebar/>
     <div className="terms">
       <div className="terms-sellers">
         <h1 className="sellers">Terms and Conditions (T&C's) for Sellers</h1>
-        <ul>
+        <ul className='terms-ul'>
           <li>
             Seller Account: By creating a seller account on our platform, you agree to provide accurate and up-to-date information about yourself and your business. You are responsible for maintaining the confidentiality of your account credentials and ensuring the security of your account.
           </li>
@@ -62,6 +65,7 @@ const Terms = () => {
           </li>
         </ul>
       </div>
+    </div>
     </div>
   );
 };

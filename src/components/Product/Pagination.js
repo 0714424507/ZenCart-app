@@ -2,7 +2,7 @@ import React from 'react';
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const handlePageChange = (page) => {
-    onPageChange(page); // Pass the selected page back to the parent component
+    onPageChange(page); 
   };
 
   const renderPaginationItems = () => {

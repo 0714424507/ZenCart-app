@@ -8,37 +8,37 @@ const Categories = () => {
       <h2>Categories</h2>
       <ul>
         <li>
-          <Link to="/categories/womens-fashion">
+          <Link to="/categories/1">
             <i className="fas fa-female"></i> Women's Fashion
           </Link>
         </li>
         <li>
-          <Link to="/categories/mens-fashion">
+          <Link to="/categories/2">
             <i className="fas fa-male"></i> Men's Fashion
           </Link>
         </li>
         <li>
-          <Link to="/categories/kids-and-toys">
+          <Link to="/categories/3">
             <i className="fas fa-child"></i> Kids and Toys
           </Link>
         </li>
         <li>
-          <Link to="/categories/home-and-office">
+          <Link to="/categories/4">
             <i className="fas fa-home"></i> Home and Office
           </Link>
         </li>
         <li>
-          <Link to="/categories/pets-and-outdoor">
+          <Link to="/categories/5">
             <i className="fas fa-paw"></i> Pets and Outdoor
           </Link>
         </li>
         <li>
-          <Link to="/categories/beauty-health-and-hair">
+          <Link to="/categories/6">
             <i className="fas fa-heartbeat"></i> Beauty, Health, and Hair
           </Link>
         </li>
         <li>
-          <Link to="/categories/electronics-and-accessories">
+          <Link to="/categories/7">
             <i className="fas fa-mobile-alt"></i> Electronics and Accessories
           </Link>
         </li>

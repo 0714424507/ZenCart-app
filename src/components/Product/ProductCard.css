@@ -1,7 +1,7 @@
 .product-card {
     margin-left: 8%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four columns, each taking equal space */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 40px; 
   }
   .product-name{
