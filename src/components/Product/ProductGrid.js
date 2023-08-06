@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import ProductCard from './ProductCard';
-import Pagination from './Pagination';
+import { Link } from 'react-router-dom';
+import './ProductGrid.css'
 
 const ProductGrid = () => {
-  const itemsPerPage = 12;
   const [products, setProducts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     fetch('http://localhost:3000/products')
@@ -13,30 +11,32 @@ const ProductGrid = () => {
       .then((data) => setProducts(data))
       .catch((error) => console.error('Error fetching products:', error));
   }, []);
+  
 
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
-
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentProducts = products.slice(startIndex, endIndex);
+  const displayedProducts = products.slice(0, 8);
 
   return (
-    <div className="product-grid">
-      <div className="grid">
-        {currentProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
+    <div className="suggested-products">
+      <h2>Products</h2>
+      <div className='homepage-grid'>
+        {displayedProducts.map(product => (
+          <div key={product.id} className="products-8">
+            <Link to={`/products/${product.id}`}>
+            <h3>{product.name}</h3>
+            </Link>
+            <Link className='8p-link' to={`/products/${product.id}`}>
+            <img src={product.image} alt={product.name} className='8-image' />
+            </Link>
+            <p className='8-price'>${product.price}</p>
+          </div>
         ))}
+            <button className='load-more'> 
+              <a href='/products'>More Products</a>
+            </button>
       </div>
-
-      <Pagination
-        currentPage={currentPage}
-        totalPages={Math.ceil(products.length / itemsPerPage)}
-        onPageChange={handlePageChange}
-      />
     </div>
   );
 };
 
 export default ProductGrid;
+
