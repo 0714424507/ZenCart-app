@@ -104,3 +104,82 @@ body {
   color: rgb(37, 14, 37);
   font-size: 20px;
 }
+
+.container2 {
+  display: flex; /* Enable flexbox layout */
+
+}
+
+.sidebar {
+  padding: 10px; /* Add some padding to the container for spacing */
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 240px; /* Adjust the width as needed */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add a floating shadow effect */
+  display: flex; /* Enable flexbox layout */
+  flex-direction: column; /* Arrange items vertically */
+  justify-content: flex-start; /* Align items to the beginning (top) */
+  align-items: flex-start; /* Align items to the top of the container */
+  flex: 1;
+}
+
+.sidebar-links {
+  display: flex; /* Enable flexbox layout for links */
+  align-items: flex-start; /* Align links to the beginning (top) */
+  margin-top: 10px;
+  padding: 10px; /* Add padding to the links */
+  text-decoration: none; /* Remove the underline from the text */
+  color: black;
+}
+
+.sidebar-links a {
+  margin-bottom: 10px; /* Add spacing between links */
+  color: black;
+  font-size: 19px;
+  text-decoration: none; /* Remove the underline from the text */
+}
+
+/* styles.css (or styles.module.css if using CSS modules) */
+
+/* Styling for the slideshow container */
+/* styles.css (or styles.module.css if using CSS modules) */
+
+/* Styling for the slideshow container */
+
+/* Slideshow.css */
+
+/* Container for the slideshow */
+/* .slideshow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height as needed */
+/* } */ */
+
+/* Slide container */
+/* .slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 530px;
+} */
+
+
+
+/* .carousel {
+  max-width: 900px;
+  max-height: 900px;
+  position: absolute;
+  height: 530px;
+  left: 100px;
+  top: 143px;
+} */
+
+.slideshow-container{
+position: absolute;
+width: 90px;
+height: 92px;
+left: 17px;
+
+}
+
