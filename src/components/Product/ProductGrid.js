@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductGrid.css'
+import AddToCartButton from './AddToCartButton';
 
 const ProductGrid = () => {
   const [products, setProducts] = useState([]);
@@ -27,6 +28,7 @@ const ProductGrid = () => {
             <h3>{product.name}</h3>
             </Link>
             <p className='price-8'>${product.price}</p>
+            <AddToCartButton/>
           </div>
         ))}
             
