@@ -17,22 +17,19 @@ const ProductGrid = () => {
 
   return (
     <div className="suggested-products">
-      <h2>Products</h2>
       <div className='homepage-grid'>
         {displayedProducts.map(product => (
           <div key={product.id} className="products-8">
-            <Link to={`/products/${product.id}`}>
-            <h3>{product.name}</h3>
-            </Link>
-            <Link className='8p-link' to={`/products/${product.id}`}>
+            <Link className='link-8' to={`/products/${product.id}`}>
             <img src={product.image} alt={product.name} className='8-image' />
             </Link>
-            <p className='8-price'>${product.price}</p>
+            <Link className='link-8' to={`/products/${product.id}`}>
+            <h3>{product.name}</h3>
+            </Link>
+            <p className='price-8'>${product.price}</p>
           </div>
         ))}
-            <button className='load-more'> 
-              <a href='/products'>More Products</a>
-            </button>
+            
       </div>
     </div>
   );
