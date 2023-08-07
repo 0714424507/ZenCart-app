@@ -16,7 +16,7 @@ const ProductCard = () => {
     <div className='product-card'>
       {products.map((product) => (
         <div key={product.id} className='product-id'>
-          <a href={`/product/${product.id}`}><img src={product.image} alt={product.name} className="product-image" /></a>
+          <a href={`/products/${product.id}`}><img src={product.image} alt={product.name} className="product-image" /></a>
           <h2 className="product-name">
             <a className="product-link" href={`/product/${product.id}`}>{product.name}</a>
           </h2>
@@ -27,21 +27,5 @@ const ProductCard = () => {
     </div>
   );
 };
-
-//   return (
-//     <div className='product-card'>
-//       {products.map((product) => (
-//         <div key={product.id} className='product-id'>
-//           <img src={product.image} alt={product.name} className="product-image" />
-//           <h2 className="product-name">
-//             <a className="product-link" href={`/product/${product.id}`}>{product.name}</a>
-//           </h2>
-//           <p className="product-price">${product.price}</p>
-//           <AddToCartButton product={product} />
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
 
 export default ProductCard;
