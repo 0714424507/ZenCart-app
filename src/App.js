@@ -1,24 +1,65 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import Categories from './components/Categories';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import SellerDashboard from './components/SellerDashboard/SellerDashboard';
+import Topbar from './components/Topbar';
+import Homepage from './components/Homepage';
 
 const App = () => {
   return (
-    <Router> 
+    <Router>
       <div>
-        <Navbar />
-        
-        {/* Use Routes instead of directly rendering Route */}
+      <Topbar/>
+      <Navbar />
+      <Homepage/>
         <Routes>
-          {/* Add routes for different pages here */}
-          <Route path="/seller-dashboard" element={<SellerDashboard />} />
-          {/* Add other routes as needed */}
+
+          <Route path="/categories/*" element={<Categories />}>
+            <Route index element={<WomenFashion />} />
+            <Route path="womens-fashion" element={<WomenFashion />} />
+            <Route path="mens-fashion" element={<MenFashion />} />
+            <Route path="kids-and-toys" element={<KidsToys />} />
+            <Route path="home-and-office" element={<HomeOffice />} />
+            <Route path="pets-and-outdoor" element={<PetsOutdoor />} />
+            <Route path="beauty-health-and-hair" element={<BeautyHealthHair />} />
+            <Route path="electronics-and-accessories" element={<ElectronicsAccessories />} />
+          </Route>
         </Routes>
+        {/* Your other components and content here */}
       </div>
     </Router>
   );
+};
+
+
+
+const WomenFashion = () => {
+  return <div>Women's Fashion Category Page</div>;
+};
+
+const MenFashion = () => {
+  return <div>Men's Fashion Category Page</div>;
+};
+
+const KidsToys = () => {
+  return <div>Kids and Toys Category Page</div>;
+};
+
+const HomeOffice = () => {
+  return <div>Home and Office Category Page</div>;
+};
+
+const PetsOutdoor = () => {
+  return <div>Pets and Outdoor Category Page</div>;
+};
+
+const BeautyHealthHair = () => {
+  return <div>Beauty, Health, and Hair Category Page</div>;
+};
+
+const ElectronicsAccessories = () => {
+  return <div>Electronics and Accessories Category Page</div>;
 };
 
 export default App;
