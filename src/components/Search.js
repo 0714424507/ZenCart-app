@@ -1,30 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link component
+import ProductDetails from './Product/ProductDetails'
 
-function Search({ onSearch }) {
-  const [searchTerm, setSearchTerm] = useState('');
+function Searchbar() {
+  const [searchValue, setSearchValue] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [products, setProducts] = useState([]);
 
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
+  const handleSearch = () => {
+    const filteredProducts = products.filter((product) =>
+      product.name.toLowerCase().includes(searchValue.toLowerCase())
+    );
+    setFilteredProducts(filteredProducts);
   };
 
-  const handleSearchSubmit = (event) => {
-    event.preventDefault();
-    onSearch(searchTerm); // Call the onSearch function with the search term
+  useEffect(() => {
+    fetch("http://localhost:3000/products")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setProducts(data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, []);
+
+  const handleSearchButtonClick = () => {
+    handleSearch();
   };
 
   return (
     <div>
-      <form onSubmit={handleSearchSubmit}>
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={handleSearchChange}
-          placeholder="Search products..."
-        />
-        <button type="submit">Search</button>
-      </form>
+      <input
+        placeholder="Search products"
+        className="flex-1 outline-none bg-black text-white"
+        value={searchValue}
+        onChange={(e) => {
+          setSearchValue(e.target.value);
+          handleSearch();
+        }}
+      />
+      <button onClick={handleSearchButtonClick}>Search</button>
+      <ul>
+        {filteredProducts.map((product) => (
+          <li key={product.id}>
+            <Link to={`/products/${product.id}`}>{product.name}</Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
-export default Search;
+export default Searchbar;
