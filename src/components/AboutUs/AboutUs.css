@@ -1,24 +1,27 @@
 /* SIDE BAR */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 200px;
-  height: 100%;
-  background-color: #f0f0f0;
-  padding: 20px;
+.tab-navigation {
+  display: flex;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
 }
 
-.sidebar a {
-  display: block;
-  padding: 10px;
+.tab {
   text-decoration: none;
   color: #333;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  margin-right: 5px;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-.sidebar a:hover {
-  background-color: #ddd;
+.tab:hover {
+  background-color: #e0e0e0;
+  border-color: #ccc;
 }
+
+
 
 /* ABOUT US */
 .aboutus {

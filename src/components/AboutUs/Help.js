@@ -1,8 +1,11 @@
 import React from 'react';
 import './AboutUs.css';
+import SideBar from './SideBar'
 
 const Help = () => {
   return (
+    <div>
+    <SideBar/>
     <div className="help">
       <div className="help-buyers">
         <h1 className="sellers">For Sellers</h1>
@@ -47,6 +50,7 @@ const Help = () => {
             </ul>
         </p>
       </div>
+    </div>
     </div>
   );
 };

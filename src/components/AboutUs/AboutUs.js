@@ -1,8 +1,11 @@
 import React from 'react';
 import './AboutUs.css';
+import SideBar from './SideBar'
 
 const AboutUs = () => {
   return (
+    <div>
+    <SideBar/>
     <div className="aboutus">
         <h1>About Us</h1>
         <br/>
@@ -35,6 +38,7 @@ const AboutUs = () => {
         <br/>
         The ZenCart Team
       </p>
+    </div>
     </div>
   );
 };
