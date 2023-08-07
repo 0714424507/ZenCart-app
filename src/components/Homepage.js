@@ -1,8 +1,9 @@
 import React from 'react';
-import img1 from "./images/img1.png";
+// import img1 from "./images/img1.png";
 import { Link } from "react-router-dom";
 import Categories from './Categories';
-// import ProductGrid from './Product/ProductGrid';
+import ProductGrid from './Product/ProductGrid';
+import TopLayout from './TopLayout';
 // import LoadMore from './Product/LoadMore';
 // import Pagination from './Product/Pagination';
 import Slideshow from './Slideshow';
@@ -10,24 +11,18 @@ import Slideshow from './Slideshow';
 function Homepage() {
   return (
     <div>
-      <div className='container1'>
-        {/* Logo */}
-        <img src={img1} alt="Logo" />
 
-        {/* Search textbox and button */}
-        <div className="search">
-          <input type="text" placeholder="Search..." />
-          <button>Search</button>
-        </div>
+      {/* <div className='container1'>
+        <img src={img1} alt="Logo" />
         <div className='cart'>
           <Link className="navbar-link" to="/cart">
             <i className="fas fa-shopping-cart fa-2x"></i>
           </Link>
         </div>
-      </div>
-
+      </div> */}
+      <TopLayout/>
       <div className='container2'>
-        <div>
+        <div className=''>
         <Categories />
         </div>
        <div>
@@ -36,9 +31,10 @@ function Homepage() {
       
       </div>
       
-        {/* <Pagination />
+        {/* <Pagination /> */}
+        <div className='homegrid'>
         <ProductGrid />
-        <LoadMore /> */}
+        </div>
       </div>
   
   );

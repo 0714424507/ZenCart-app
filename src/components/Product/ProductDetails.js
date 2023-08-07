@@ -47,6 +47,7 @@ const ProductDetails = () => {
       <h2 className='name-details'>{product.name}</h2>
       <p className='price-details'>${product.price}</p>
       <p className='product-description'>{product.description}</p>
+      {/* <p className='product-variations'>{product.variations}</p> */}
       <div className="quantity-container">
       <div className="down-button"onClick={handleDecreaseQuantity}>▼</div>
       <div className="quantity-value">{quantity}</div>

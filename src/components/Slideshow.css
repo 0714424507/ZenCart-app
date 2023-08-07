@@ -1,0 +1,27 @@
+/* Slide container */
+.carousel-container {
+    overflow: hidden;
+    margin-top: 15%;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 600px; 
+    max-height: 400px;
+    position: centre;
+    margin-left: 50%;
+    width: 600px;
+    left: 41px;
+    top: 123px;
+    border: 2px solid rgb(97, 43, 43);
+    margin-bottom: 10%;
+  }
+  
+  .carousel .slide {
+    transition-duration: 0.5s; 
+  }
+
+  .slide-img{
+    height: auto!important;
+    width:auto ;
+    object-fit: cover;
+    margin-left: 40%;
+  }
