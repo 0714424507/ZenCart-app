@@ -1,8 +1,11 @@
 import React from 'react';
 import './AboutUs.css';
+import SideBar from './SideBar'
 
 const ContactUs = () => {
   return (
+    <div>
+    <SideBar/>
     <div className="contact-us">
       <h1>Contact Us</h1>
       <p>
@@ -31,6 +34,7 @@ const ContactUs = () => {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 };

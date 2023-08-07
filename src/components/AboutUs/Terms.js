@@ -1,8 +1,11 @@
 import React from 'react';
 import './AboutUs.css';
+import SideBar from './SideBar'
 
 const Terms = () => {
   return (
+    <div>
+      <SideBar/>
     <div className="terms">
       <div className="terms-sellers">
         <h1 className="sellers">Terms and Conditions (T&C's) for Sellers</h1>
@@ -62,6 +65,7 @@ const Terms = () => {
           </li>
         </ul>
       </div>
+    </div>
     </div>
   );
 };
