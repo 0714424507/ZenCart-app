@@ -1,8 +1,10 @@
 .product-card {
-    margin-left: 8%;
+    margin-left: 28%;
+    margin-top: -425px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four columns, each taking equal space */
-    gap: 40px; 
+    grid-template-columns: repeat(3, 1fr); /* Four columns, each taking equal space */
+    gap: 40px;
+    width: 70%;
   }
   .product-name{
     font-size: 16px;
