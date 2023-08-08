@@ -14,13 +14,11 @@ const ProductGrid = () => {
   }, []);
   
 
-  const displayedProducts = products.slice(0, 8);
+  const displayedProducts = products.slice(0, 3);
+
 
   return (
     <div className="suggested-products">
-      <Link to="/products">
-        <button>View All Products</button>
-      </Link>
       <div className='homepage-grid'>
         {displayedProducts.map(product => (
           <div key={product.id} className="products-8">
@@ -33,7 +31,7 @@ const ProductGrid = () => {
             <p className='price-8'>${product.price}</p>
             <AddToCartButton/>
           </div>
-        ))}
+        ))}  
             
       </div>
     </div>

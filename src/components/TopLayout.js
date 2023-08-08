@@ -1,28 +1,32 @@
-import { Link } from "react-router-dom";
+import React from "react";
 import Search from "./Search";
 import Topbar from "./Topbar";
 import Navbar from "./Navbar";
-import img1 from "./images/img1.png";
 
-function TopLayout(){
-  return(
-        <div>
-            <Topbar/>
+import { Link } from "react-router-dom";
 
-            <div className='container1'>
-            {/* Logo */}
-            <a href= '/'><img src={img1} alt="Logo" /></a>
-            <div className='cart'>
-          <Link className="navbar-link" to="/cart">
-            <i className="fas fa-shopping-cart fa-2x"></i>
-          </Link>
-        </div>
+function TopLayout() {
+  return (
+    <div className="top-layout">
+      <Topbar />
+      <div className="header">
       </div>
-        
-        <Navbar/>
-        <Search/>
-        </div>
-    );
-}
-export default TopLayout;
+      <Navbar />
+      <div className="third-layer">
+        <nav className="navbarthird">
+          <a className="logo-link" href="/">
+            <h1 className="logo">zen<span>cart</span></h1>
+          </a>
+          
+          <Search />
+            <Link className="cart" to="/cart">
+              <i className="fas fa-shopping-cart fa-2x"></i>
+            </Link>
+        </nav>
+      </div>
 
+    </div>
+  );
+}
+
+export default TopLayout;

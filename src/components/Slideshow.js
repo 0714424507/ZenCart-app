@@ -15,7 +15,7 @@ function HomeCarousel() {
         infiniteLoop
         showThumbs={false}
         showStatus={false}
-        interval={2000}
+        interval={3000}
         transitionTime={500}
         transitionTimingFunction="ease-in-out"
         showIndicators={false}
