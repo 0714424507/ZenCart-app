@@ -9,6 +9,13 @@ import ContactUs from './components/AboutUs/ContactUs';
 import Terms from './components/AboutUs/Terms';
 import ProductGrid from './components/Product/ProductGrid';
 import Homepage from './components/Homepage'
+import WomensFashion from './components/Categories/WomensFashion';
+import MensFashion from './components/Categories/MensFashion.js';
+import KidsAndToys from './components/Categories/KidsAndToys';
+import HomeAndOffice from './components/Categories/HomeAndOffice';
+import PetsAndOutdoor from './components/Categories/PetsAndOutdoor';
+import BeautyHealthAndHair from './components/Categories/BeautyHealthAndHair';
+import ElectronicsAndAccessories from './components/Categories/ElectronicsAndAccessories';
 // import  AuthProvider  from './components/CustomerAuthContext';
 
 
@@ -26,6 +33,13 @@ function App (){
           <Route path="/contact-us" element={<ContactUs/>} />
           <Route path="/terms" element={<Terms/>}/>
           <Route path="/productsgrid" element={<ProductGrid/>}/>
+          <Route path="/womens-fashion" element={<WomensFashion/>}/>
+          <Route path="/mens-fashion" element={<MensFashion/>}/>
+          <Route path="/kids-and-toys" element={<KidsAndToys/>}/>
+          <Route path="/home-and-office" element={<HomeAndOffice/>}/>
+          <Route path="/pets-and-outdoor" element={<PetsAndOutdoor/>}/>
+          <Route path="/beauty-health-and-hair" element={<BeautyHealthAndHair/>}/>
+          <Route path="electronics-and-accessories/" element={<ElectronicsAndAccessories/>}/>
           <Route path="/" element={<Homepage/>}/>
         </Routes>
       </div>

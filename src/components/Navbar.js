@@ -15,7 +15,7 @@ const Navbar = () => {
       <ul className="navbar-list">
         <li>
           <Link className="helpbar-link" to="/help">
-            Help
+          <i className="fas fa-question"></i>  Help
           </Link>
         </li>
         <li>
