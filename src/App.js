@@ -1,65 +1,38 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Categories from './components/Categories';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Topbar from './components/Topbar';
-import Homepage from './components/Homepage';
+import AllProducts from './components/Product/AllProducts';
+import ProductDetails from './components/Product/ProductDetails';
+import Help from './components/AboutUs/Help';
+import AboutUs from './components/AboutUs/AboutUs';
+import ContactUs from './components/AboutUs/ContactUs';
+import Terms from './components/AboutUs/Terms';
+import ProductGrid from './components/Product/ProductGrid';
+import Homepage from './components/Homepage'
+// import  AuthProvider  from './components/CustomerAuthContext';
 
-const App = () => {
+
+function App (){
   return (
+    
     <Router>
+      {/* <AuthProvider> */}
       <div>
-      <Topbar/>
-      <Navbar />
-      <Homepage/>
         <Routes>
-
-          <Route path="/categories/*" element={<Categories />}>
-            <Route index element={<WomenFashion />} />
-            <Route path="womens-fashion" element={<WomenFashion />} />
-            <Route path="mens-fashion" element={<MenFashion />} />
-            <Route path="kids-and-toys" element={<KidsToys />} />
-            <Route path="home-and-office" element={<HomeOffice />} />
-            <Route path="pets-and-outdoor" element={<PetsOutdoor />} />
-            <Route path="beauty-health-and-hair" element={<BeautyHealthHair />} />
-            <Route path="electronics-and-accessories" element={<ElectronicsAccessories />} />
-          </Route>
+          <Route path="/products" element={<AllProducts />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/about-us" element={<AboutUs/>} />
+          <Route path="/help" element={<Help/>} /> 
+          <Route path="/contact-us" element={<ContactUs/>} />
+          <Route path="/terms" element={<Terms/>}/>
+          <Route path="/productsgrid" element={<ProductGrid/>}/>
+          <Route path="/" element={<Homepage/>}/>
         </Routes>
-        {/* Your other components and content here */}
       </div>
+      {/* </AuthProvider> */}
     </Router>
+    
   );
-};
-
-
-
-const WomenFashion = () => {
-  return <div>Women's Fashion Category Page</div>;
-};
-
-const MenFashion = () => {
-  return <div>Men's Fashion Category Page</div>;
-};
-
-const KidsToys = () => {
-  return <div>Kids and Toys Category Page</div>;
-};
-
-const HomeOffice = () => {
-  return <div>Home and Office Category Page</div>;
-};
-
-const PetsOutdoor = () => {
-  return <div>Pets and Outdoor Category Page</div>;
-};
-
-const BeautyHealthHair = () => {
-  return <div>Beauty, Health, and Hair Category Page</div>;
-};
-
-const ElectronicsAccessories = () => {
-  return <div>Electronics and Accessories Category Page</div>;
 };
 
 export default App;
