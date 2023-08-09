@@ -16,14 +16,16 @@ import HomeAndOffice from './components/Categories/HomeAndOffice';
 import PetsAndOutdoor from './components/Categories/PetsAndOutdoor';
 import BeautyHealthAndHair from './components/Categories/BeautyHealthAndHair';
 import ElectronicsAndAccessories from './components/Categories/ElectronicsAndAccessories';
-// import  AuthProvider  from './components/CustomerAuthContext';
+import  AuthProvider  from './components/CustomerAuthContext';
+import Login from './components/Login';
+import Signup from './components/Signup';
 
 
 function App (){
   return (
     
     <Router>
-      {/* <AuthProvider> */}
+      <AuthProvider>
       <div>
         <Routes>
           <Route path="/products" element={<AllProducts />} />
@@ -40,10 +42,12 @@ function App (){
           <Route path="/pets-and-outdoor" element={<PetsAndOutdoor/>}/>
           <Route path="/beauty-health-and-hair" element={<BeautyHealthAndHair/>}/>
           <Route path="electronics-and-accessories/" element={<ElectronicsAndAccessories/>}/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/signup" element={<Signup/>}/>
           <Route path="/" element={<Homepage/>}/>
         </Routes>
       </div>
-      {/* </AuthProvider> */}
+      </AuthProvider>
     </Router>
     
   );
