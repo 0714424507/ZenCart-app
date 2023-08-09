@@ -5,7 +5,7 @@ import { useContext } from "react";
 const Navbar = () => {
   const { logout } = useContext(CustomerAuthContext);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [orders, setOrders] = useState([]);
+  const [setOrders] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
