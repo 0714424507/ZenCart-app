@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AddToCartButton from './AddToCartButton';
 import './ProductCard.css';
 
-const ProductCard = () => {
+const ProductCard = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const ProductCard = () => {
             <a className="product-link" href={`/product/${product.id}`}>{product.name}</a>
           </h2>
           <p className="product-price">${product.price}</p>
-          <AddToCartButton product={product} />
+          <AddToCartButton product={product} addToCart={addToCart} />
         </div>
       ))}
     </div>
