@@ -8,13 +8,13 @@ const ProductCard = () => {
   useEffect(() => {
     fetch('http://localhost:3000/products')
       .then((response) => response.json())
-      .then((data) => setProducts(data))
+      .then((data) => setProducts(data.data))
       .catch((error) => console.error('Error fetching products:', error));
   }, []);
 
   return (
     <div className='product-card'>
-      {products.map((product) => (
+      {products && products.map((product) => (
         <div key={product.id} className='product-id'>
           <a href={`/products/${product.id}`}><img src={product.image} alt={product.name} className="product-image" /></a>
           <h2 className="product-name">
