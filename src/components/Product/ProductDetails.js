@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './ProductDetails.css'
 import TopLayout from '../TopLayout'
+import ProductReviews from './ProductReviews';
+// import Breadcrumbs from '../Breadcrumbs';
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -21,7 +23,6 @@ import {
 
 // import Categories from '../Categories'
 // import ProductVariations from './ProductVariations';
-// import Breadcrumbs from '../Breadcrumbs'
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -72,6 +73,7 @@ const ProductDetails = () => {
       <h2 className='name-details'>{product.name}</h2>
       <p className='price-details'>${product.price}</p>
       <p className='product-description'>{product.description}</p>
+      <ProductReviews/>
       {/* <ProductVariations variations={product.variations} onSelectVariation={handleSelectVariation} /> */}
       <div className="quantity-container">
       <div className="down-button"onClick={handleDecreaseQuantity}>▼</div>

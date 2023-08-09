@@ -134,3 +134,33 @@
     border: 0.5px solid black;
   }
   
+  .customer-reviews {
+    margin-top: 20px;
+  }
+  
+  .reviews-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .review {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .rating {
+    font-size: 24px;
+    color: gold;
+    margin-right: 10px;
+  }
+  
+  .star {
+    cursor: pointer;
+  }
+  
+  .star.filled {
+    color: gold;
+  }
+
+  

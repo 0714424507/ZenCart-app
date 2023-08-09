@@ -1,18 +1,18 @@
 .custom-button {
-    background-color: white;
-    border: 1px solid rgb(215, 215, 215) ;
-    color: black;
+    background-color: #ee6a5b;
+    border: 1px solid #ee6a5b ;
+    color: white;
     padding: 3px 30px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     border-width: 2px;
     margin-right:140px;
   }
  
   .custom-button:hover {
-    background-color: #a5a5a5; 
-    color: white;
+    background-color: white; 
+    color: black;
   }
   
