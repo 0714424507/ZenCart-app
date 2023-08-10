@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 function Searchbar() {
   const [searchValue, setSearchValue] = useState("");
@@ -41,7 +43,7 @@ function Searchbar() {
         value={searchValue}
         onChange={handleSearchInputChange}
       />
-      <button className='search-button'>SEARCH</button>
+      {/* <button className='search-button'><FontAwesomeIcon icon={faMagnifyingGlass} /></button> */}
       {searchValue && (
         <ul className='search-results'>
           {filteredProducts.map((product) => (
