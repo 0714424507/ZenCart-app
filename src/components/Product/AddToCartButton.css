@@ -9,6 +9,7 @@
     font-weight: bold;
     border-width: 2px;
     margin-right:140px;
+    max-width: 80px;
   }
  
   .custom-button:hover {
