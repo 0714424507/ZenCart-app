@@ -82,8 +82,70 @@ body {
   color: white;
   background-color: grey;
   padding: 3px 5px;
-  border-radius: 3px;
+  border-radius: 3px;}
+
+
+.dropdown {
+  position: relative;
 }
+
+.dropdown-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.dropdown-btn:hover .arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  width: 200px;
+}
+
+.dropdown-btn:hover + .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
+
+.dropdown-content li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.dropdown-content li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #333;
+  transition: transform 0.3s;
+  margin-left: 5px;
+}
+
 
 .navbar-button {
  margin-left: 8%;

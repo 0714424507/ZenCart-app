@@ -47,71 +47,35 @@ const Navbar = () => {
       <ul className="navbar-list">
         <li>
           <Link className="helpbar-link" to="/help">
-          <i className="fas fa-question"></i>  Help
+            <i className="fas fa-question"></i> Help
           </Link>
         </li>
-        <li>
-          <div
-            className="navbar-link"
-            onClick={toggleDropdown}
-            onMouseEnter={toggleDropdown}
-            onMouseLeave={toggleDropdown}
-          >
-            <i className="fas fa-user"></i> Account
-            {isDropdownOpen && (
-              <div className="dropdown-menu">
-                {isLoggedIn ? (
-                  <>
-                    <Link className="dropdown-item" to="/user">
-                      My Account
-                    </Link>
-                    <Link className="dropdown-item" to="/orders">
-                      Orders
-                    </Link>
-                    <button
-                      className="dropdown-item"
-                      onClick={triggerLogout}
-                    >
-                      Logout
-                    </button>
-                  </>
-                ) : (
-                  <>
-                    <Link className="dropdown-item" to="/login">
-                      Login
-                    </Link>
-                    <Link className="dropdown-item" to="/signup">
-                      Sign Up
-                    </Link>
-                  </>
-                )}
-              </div>
-            )}
-          </div>
-        </li>
+        <div className="dropdown">
+          <button className="dropdown-btn" onClick={toggleDropdown}>
+            <span>Account</span>
+            <span className="arrow"></span>
+          </button>
+          {isDropdownOpen && (
+            <ul className="dropdown-content">
+              {isLoggedIn ? (
+                <>
+                  <li><Link to="/signup">Sign Up</Link></li>
+                  <li><Link to="/login">Log in</Link></li>
+                  <li><Link to="/user">My Account</Link></li>
+                  <li><button onClick={triggerLogout}>Logout</button></li>
+                </>
+              ) : (
+                <>
+                  <li><Link to="/login">Login</Link></li>
+                  <li><Link to="/signup">Sign Up</Link></li>
+                </>
+              )}
+            </ul>
+          )}
+        </div>
       </ul>
     </nav>
   );
 };
+
 export default Navbar;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

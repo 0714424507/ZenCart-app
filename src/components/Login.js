@@ -1,7 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {Link } from "react-router-dom";
-// import './Login.css';
+import './User.css';
+import LayOut from './TopLayout'
 
 import { CustomerAuthContext } from './CustomerAuthContext';
 
@@ -21,17 +22,22 @@ function Login() {
 
 
   return (
-    <div className="" style={{ backgroundImage: `url('./bg2.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      {/* ... Other JSX code ... */}
-      <div className=" flex flex-col min-h-screen items-center ">
+    <div>
+      <LayOut/>
+      <div class="background">
+          <div class="shape"></div>
+          <div class="shape"></div>
+        </div>
+      <div className=" login-form">
         <form onSubmit={handleSubmit} className="flex flex-col pt-10 px-4 py-5 bg-white border-2 border-blue-900 mt-20 rounded">
           <h1 className="text-2xl font-bold text-left pb-3">Login</h1>
-          <label className="py-2 font-semibold">Email</label>
+          <label className="login-email">Email</label>
           <input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="border-2 rounded-md border-gray-300 p-2"
             type="email"
+            placeholder="email" 
           />
           <label className="py-2 font-semibold">Password</label>
           <input
@@ -39,6 +45,7 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
             className="border-2 rounded-md border-gray-300 p-2"
             type="password"
+            placeholder="password" 
           />
           <button
             className="bg-purple-900 hover:bg-purple-500 text-white my-5 p-2 rounded-md mx-20"
