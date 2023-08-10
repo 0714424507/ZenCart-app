@@ -2,6 +2,8 @@ import React from 'react'
 import {useContext, useState} from 'react'
 import { CustomerAuthContext } from './CustomerAuthContext';
 import {Link } from "react-router-dom";
+import './User.css'
+import TopLayout from './TopLayout'
 function Signup() {
 
     const {register} = useContext(CustomerAuthContext)
@@ -18,34 +20,38 @@ function Signup() {
   
   
     return (
-      <div className=""style={{backgroundImage: `url('./bg2.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
-       <div className='text-center'>
-              <span className="font-bold text-black font-bold  text-2xl flex-shrink-0">
-                {/* <FontAwesomeIcon icon={faPlaneDeparture}  /> */}
-                <span className="ml-4">Zencart</span>
-                </span>
+      <div className='body'>
+        <TopLayout/>
+        <div class="background">
+          <div class="shape"></div>
+          <div class="shape"></div>
         </div>
-      <div className=" flex flex-col min-h-screen items-center pb-10 ">
+      <div className="signup-form">
         <form 
         onSubmit={handleSubmit}
         className=" flex flex-col pt-10 px-4 py-5 bg-white border-2 border-gray-400 mt-20 rounded">
           <h1 className="text-2xl font-bold text-left pb-3">Sign Up</h1>
-          <label className="py-2 font-semibold">Name</label>
+          <label className="name">Name</label>
           <input
           value={name}
           onChange={(e) => setName(e.target.value)}
-           className="border-2 rounded-md border-gray-300" type="text" />
-          <label className="py-2 font-semibold">Email</label>
+           className="border-2 rounded-md border-gray-300" type="text" 
+           placeholder="name" 
+           />
+          <label className="email">Email</label>
           <input 
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="border-2 rounded-md border-gray-300" type="email" />
-          <label className="py-2 font-semibold">Password</label>
+          className="border-2 rounded-md border-gray-300" type="email" 
+          placeholder="email" 
+          />
+          <label className="password">Password</label>
           <input
           value={password}
           onChange={(e) => setPassword(e.target.value)}
             className="border-2 rounded-md border-gray-300"
             type="password"
+            placeholder="password" 
           />
           <button
             className="bg-purple-900 hover:bg-purple-500 text-white my-5 p-1 rounded-md mx-20"
@@ -55,7 +61,7 @@ function Signup() {
           </button>
           <p className="text-center">Already have an account? <Link to="/login" className="text-blue-500">Login</Link></p>
         </form>
-      </div>
+    </div>
     </div>
     );
   }
