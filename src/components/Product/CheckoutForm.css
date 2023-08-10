@@ -1,0 +1,61 @@
+/* ... (your existing CSS) */
+
+/* CHECKOUT FORM */
+.checkout-form {
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .checkout-form h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .checkout-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .checkout-form input,
+  .checkout-form textarea,
+  .checkout-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
+  .checkout-form select {
+    padding: 8px;
+  }
+  
+  .checkout-form button[type="submit"] {
+    background-color: #e87968;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .checkout-form button[type="submit"]:hover {
+    background-color: #d86857; /* Slightly darker shade on hover */
+    transform: scale(1.05); /* Slightly larger size on hover */
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .checkout-form {
+      padding: 15px;
+    }
+  }
+  

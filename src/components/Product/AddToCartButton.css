@@ -1,19 +1,17 @@
 .custom-button {
-    background-color: #ee6a5b;
-    border: 1px solid #ee6a5b ;
-    color: white;
-    padding: 3px 30px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: bold;
-    border-width: 2px;
-    margin-right:140px;
-    max-width: 80px;
-  }
- 
-  .custom-button:hover {
-    background-color: white; 
-    color: black;
-  }
-  
+  background-color: #ee6a5b;
+  border: 1px solid #ee6a5b ;
+  color: white;
+  padding: 3px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bold;
+  border-width: 2px;
+  margin-right:140px;
+}
+
+.custom-button:hover {
+  background-color: white; 
+  color: black;
+}

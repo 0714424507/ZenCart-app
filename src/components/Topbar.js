@@ -9,6 +9,7 @@ function Topbar(){
                 <i class="fa fa-shopping-bag fa-4x"></i>
             </div>
          </div>     
+         
     );
 }
 

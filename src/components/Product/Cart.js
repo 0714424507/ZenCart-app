@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useCart } from './CartContext';
+import Topbar from '../Topbar';
 
 const Cart = () => {
   const { cartItems, removeFromCart, clearCart, getSubtotal, updateQuantity } = useCart();
 
   return (
     <div>
+      <Topbar />
       <h2>Your Cart</h2>
       {cartItems.length === 0 ? (
         <p>Your cart is empty</p>
@@ -35,7 +38,9 @@ const Cart = () => {
           <button onClick={clearCart} className="clear-cart-button">
             Clear Cart
           </button>
-          <button className="checkout-button">Checkout</button>
+          <Link to="/cart/checkout" className="checkout-button">
+           Proceed To Checkout
+          </Link>
         </div>
       )}
     </div>
