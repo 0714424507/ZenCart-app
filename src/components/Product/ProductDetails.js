@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { useCart } from './CartContext';
 import './ProductDetails.css'
 import TopLayout from '../TopLayout'
 import ProductReviews from './ProductReviews';
@@ -26,6 +27,7 @@ import {
 
 const ProductDetails = () => {
   const { id } = useParams();
+  const { addToCart } = useCart();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
 
@@ -76,16 +78,20 @@ const ProductDetails = () => {
       <ProductReviews/>
       {/* <ProductVariations variations={product.variations} onSelectVariation={handleSelectVariation} /> */}
       <div className="quantity-container">
-      <div className="down-button"onClick={handleDecreaseQuantity}>▼</div>
-      <div className="quantity-value">{quantity}</div>
-      <div className="up-button" onClick={handleIncreaseQuantity}>▲</div>
+        <div className="down-button" onClick={handleDecreaseQuantity}>
+          ▼
+        </div>
+        <div className="quantity-value">{quantity}</div>
+        <div className="up-button" onClick={handleIncreaseQuantity}>
+          ▲
+        </div>
       </div>
-      <p className='quantity-details'>
+      <p className="quantity-details">
         {formattedQuantity} items left
         <meter value={formattedQuantity} min="0" max="100"></meter>
       </p>
       <div className="details-buttons">
-      <button className='add-to-cart-button'>
+        <button className="add-to-cart-button" onClick={() => addToCart(product)}>
           Add to Cart
         </button>
         <button className='buy-now-button'>

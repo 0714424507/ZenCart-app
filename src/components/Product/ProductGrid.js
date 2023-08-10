@@ -28,7 +28,7 @@ const ProductGrid = () => {
               <h3>{product.name}</h3>
             </Link>
             <p className='price-8'>${product.price}</p>
-            <AddToCartButton />
+            <AddToCartButton product={product}/>
           </div>
         ))}  
       </div>
