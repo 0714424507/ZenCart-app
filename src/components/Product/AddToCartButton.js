@@ -20,7 +20,7 @@ const AddToCartButton = ({ product }) => {
       <button className="custom-button" onClick={handleClick}>
         <FontAwesomeIcon icon={faCartShopping} />
       </button>
-      {showPopup && <div className="popup">Successfully added to cart!</div>}
+      {showPopup && <div className="popup-add">Successfully added to cart!</div>}
     </div>
   );
 };
