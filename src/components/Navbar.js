@@ -37,12 +37,33 @@ const Navbar = () => {
   };
   return (
     <nav className="navbar">
-      <div className="navbar-button">
-        <button >
-          <Link className="sellerbar-link" to="/seller">
-            <h3>Sell on ZenCart</h3>
-          </Link>
-        </button>
+   <div className="navbar-button">
+        <div
+          className="sellerbar-link"
+          onClick={toggleDropdown}
+          onMouseEnter={toggleDropdown}
+          onMouseLeave={toggleDropdown}
+        >
+          <h3>Sell on ZenCart</h3>
+          {isDropdownOpen && (
+            <div className="dropdown-menu">
+              {!isLoggedIn ? (
+                <>
+                  <Link className="dropdown-item" to="/SignIn">
+                    Sign In
+                  </Link>
+                  <Link className="dropdown-item" to="/register">
+                    Register
+                  </Link>
+                </>
+              ) : (
+                <Link className="sellerbar-link" to="/product_form">
+                <h3>Add product</h3>
+              </Link>
+              )}
+            </div>
+          )}
+        </div>
       </div>
       <ul className="navbar-list">
         <li>
