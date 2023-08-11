@@ -8,8 +8,8 @@
     border-radius: 5px;
     background-color: #fff;
     justify-content: space-between;
-    margin-top: 5%;
-    margin-right: 30%;
+    margin-top: -32%;
+    margin-left: 27%;
   }
   
   .image-details {
@@ -32,7 +32,7 @@
     font-size: 24px;
     margin: 10px 0;
     margin-top: 20%;
-    margin-left: 30%;
+    text-align: center;
 
   }
   
@@ -48,76 +48,71 @@
     font-size: 16px;
     margin: 5px 0;
     font-weight: lighter;
-    margin-left: 20%;
-    margin-top: -25px;
-    margin-bottom: 60px;
+    margin-top: -60px;
+    margin-bottom: 80px;
   }
   meter {
     width: 20%;
     height: 10px;
     margin-left: 4%;
+    margin-top: -100px;
   }
   
 .product-description {
     font-size: 16px;
     line-height: 1.5;
     margin: 10px 0;
-    margin-top: 5%;
+    margin-top: 8%;
     margin-bottom: 10%;
   }
 
   .quantity-container {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
     border: 2px solid black;
     padding: 1px;
     width: 90px;
     border-radius: 4px;
+    margin-left: 23%;
+    margin-top: -22px;
+    
   }
   
   .quantity-info {
     display: flex;
     align-items: center;
+    padding: 10px 20px;
   }
   
   .down-button,
   .up-button {
-    font-size: 17px;
+    padding-bottom: 3px;
+    border-radius: 4px;
+    font-size: 20px;
+    padding-top: 3px;
     cursor: pointer;
-    margin:0px 7px;
-    color: rgb(142, 141, 141);
+    margin:0px 6px;
+    color: rgb(10, 10, 10);
+    font-weight: lighter;
   }
   .down-button:hover,
   .up-button:hover{
-    color: black;
+    color: #e75a14;
   }
   .quantity-value {
     font-size: 15px;
-    margin:0px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 3px;
   }
 
 .details-buttons{
-    margin-right: 10%;
+    margin-left: 25%;
     margin-top: -10%;
     margin-bottom: 5%;
     
 }
-  .add-to-cart-button {
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    border: 0.5px solid black;
-    margin-right: 10%;
-  }
-  .add-to-cart-button:hover{
-    background-color: black;
-    color: white;
-  }
   .buy-now-button {
     background-color: black;
     color: white;
@@ -125,8 +120,8 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px; 
-    margin-right: 10%;
+    margin-top: 16px; 
+    margin-left: 40%;
   }
   .buy-now-button:hover{
     background-color: white;
@@ -134,14 +129,7 @@
     border: 0.5px solid black;
   }
   
-  .customer-reviews {
-    margin-top: 20px;
-  }
-  
-  .reviews-title {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
+ 
   
   .review {
     display: flex;
@@ -150,9 +138,13 @@
   }
   
   .rating {
+    margin-top: -40px;
     font-size: 24px;
     color: gold;
-    margin-right: 10px;
+    margin-left: 200px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 70px;
   }
   
   .star {
@@ -163,4 +155,7 @@
     color: gold;
   }
 
-  
+.share{
+  margin-top: -130px;
+  margin-left: 40%;
+}

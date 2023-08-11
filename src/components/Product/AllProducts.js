@@ -23,7 +23,7 @@ function AllProducts(){
             <div className='homepage-grid2'>
                 {products.map(product => (
                     <div className='all'>
-                <div key={product.id} className="products-8">
+                <div key={product.id} className="products-2">
                     <Link className='link-8' to={`/products/${product.id}`}>
                     <img src={product.image} alt={product.name} className='8-image' />
                     </Link>
@@ -36,6 +36,26 @@ function AllProducts(){
                 </div>
                 ))}  
             </div>
+                <div className="notification">
+                <div className="notification-container">
+                    <div className="notification-media">
+                    {/* <img src="https://i.pinimg.com/474x/48/57/b5/4857b5ff639a34c700929609ac8c25b0.jpg" alt="" className="notification-user-avatar"/> */}
+                    <i className="fa fa-thumbs-up notification-reaction"></i>
+                    </div>
+                    <div className="notification-content">
+                    <p className="notification-text">
+                    {/* <strong>
+                        <h1 className="logo">
+                        zen<span>cart</span>
+                        </h1>
+                    </strong>, */}
+                    <strong>Thank you for visiting our page!<br/></strong> We're thrilled to have you here. 🛍️<br/><strong>Enjoy your shopping experience and discover amazing treasures!</strong>
+                    </p>
+                    <span className="notification-timer">a few seconds ago</span>
+                    </div>
+                    <span className="notification-status"></span>
+                </div>
+                </div>
         </div>
         
     );

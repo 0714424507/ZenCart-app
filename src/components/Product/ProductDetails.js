@@ -4,6 +4,7 @@ import { useCart } from './CartContext';
 import './ProductDetails.css'
 import TopLayout from '../TopLayout'
 import ProductReviews from './ProductReviews';
+import Categories from '../Categories';
 // import Breadcrumbs from '../Breadcrumbs';
 import {
   FacebookShareButton,
@@ -21,9 +22,6 @@ import {
   WhatsappShareButton,
   WhatsappIcon,
 } from 'next-share'
-
-// import Categories from '../Categories'
-// import ProductVariations from './ProductVariations';
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -54,9 +52,6 @@ const ProductDetails = () => {
     }
   };
   
-  // const handleSelectVariation = (variation) => {
-  //   console.log('Selected variation:', variation);
-  // };
   const currentUrl = window.location.href;
 
   if (!product) {
@@ -68,7 +63,7 @@ const ProductDetails = () => {
     <div>
     < TopLayout />
     {/* <Breadcrumbs /> */}
-    {/* <Categories/> */}
+    <Categories/>
     <div className='product-details'>
       <img src={product.image} alt={product.name} className='image-details' />
       <div  className='info-details'>
@@ -76,6 +71,10 @@ const ProductDetails = () => {
       <p className='price-details'>${product.price}</p>
       <p className='product-description'>{product.description}</p>
       <ProductReviews/>
+      <p className="quantity-details">
+        {formattedQuantity} items left
+        <meter value={formattedQuantity} min="0" max="100"></meter>
+      </p>
       {/* <ProductVariations variations={product.variations} onSelectVariation={handleSelectVariation} /> */}
       <div className="quantity-container">
         <div className="down-button" onClick={handleDecreaseQuantity}>
@@ -86,19 +85,17 @@ const ProductDetails = () => {
           ▲
         </div>
       </div>
-      <p className="quantity-details">
-        {formattedQuantity} items left
-        <meter value={formattedQuantity} min="0" max="100"></meter>
-      </p>
+     
       <div className="details-buttons">
-        <button className="add-to-cart-button" onClick={() => addToCart(product)}>
-          Add to Cart
-        </button>
-        <button className='buy-now-button'>
-          Buy Now
+        <button className='buy-now-button' onClick={() => addToCart(product)}>
+        Add to Cart
         </button> 
       </div>
-      <div>
+     
+      </div>
+
+    </div>
+    <div className='share'>
           <FacebookShareButton
             url={currentUrl} 
             hashtag={'#zencart'}
@@ -124,9 +121,6 @@ const ProductDetails = () => {
         >
           <WhatsappIcon size={32} round />
         </WhatsappShareButton>
-    </div>
-      </div>
-
     </div>
     </div>
   );

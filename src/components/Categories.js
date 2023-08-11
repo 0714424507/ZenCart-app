@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Categories = () => {
   return (
     <div className = 'sidebar'>
-      <h2>Categories</h2>
+      <h2><i className="fas fa-list"></i>Categories</h2>
       <ul>
           <Link className="sidebar-links" to="/womens-fashion">
             <i className="fas fa-female"></i> Women's Fashion

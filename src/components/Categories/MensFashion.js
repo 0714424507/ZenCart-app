@@ -27,14 +27,14 @@ function ElectronicsAndAccessories({ categoryId }) {
     <div>
       <TopLayout/>
       <Categories/>
-      <div className='product-card'>
+      <div className='category-card'>
         {category.products.map(product => (
-          <div key={product.id} className='product-id'>
-            <a href={`/products/${product.id}`}><img src={product.image} alt={product.name} className="product-image" /></a>
+          <div key={product.id} className='product-id-cat'>
+            <a href={`/products/${product.id}`}><img src={product.image} alt={product.name} className="product-image-cat" /></a>
             <h2 className="product-name">
-            <a className="product-link" href={`/product/${product.id}`}>{product.name}</a>
+            <a className="product-link-cat" href={`/product/${product.id}`}>{product.name}</a>
           </h2>
-          <p className="product-price">${product.price}</p>
+          <p className="product-price-cat">${product.price}</p>
           <AddToCartButton product={product}/>
           </div>
         ))}
