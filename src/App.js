@@ -19,12 +19,16 @@ import ElectronicsAndAccessories from './components/Categories/ElectronicsAndAcc
 import  AuthProvider  from './components/CustomerAuthContext';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Register from './components/Register';
+import SignIn from './components/SignIn';
+import SellerAuthProvider from './components/SellerAuthContext';
 
 
 function App (){
   return (
     
     <Router>
+      <SellerAuthProvider>
       <AuthProvider>
       <div>
         <Routes>
@@ -44,10 +48,13 @@ function App (){
           <Route path="electronics-and-accessories/" element={<ElectronicsAndAccessories/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/signup" element={<Signup/>}/>
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/SignIn" element={<SignIn/>}/>
           <Route path="/" element={<Homepage/>}/>
         </Routes>
       </div>
       </AuthProvider>
+      </SellerAuthProvider>
     </Router>
     
   );
