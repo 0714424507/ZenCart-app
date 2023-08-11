@@ -19,23 +19,26 @@ import ElectronicsAndAccessories from './components/Categories/ElectronicsAndAcc
 import  AuthProvider  from './components/CustomerAuthContext';
 import Login from './components/Login';
 import Signup from './components/Signup';
-import Register from './components/Register';
+import Cart from './components/Product/Cart';
+import { CartProvider } from './components/Product/CartContext';
 import SignIn from './components/SignIn';
 import SellerAuthProvider from './components/SellerAuthContext';
-
-
+import Register from './components/Register';
+import SellerNav from './components/SellerDashboard/SellerNav';
+import AddProductForm from './components/SellerDashboard/AddProductForm';
+import Sellers from './components/SellerDashboard/Sellers';
 function App (){
   return (
-    
     <Router>
       <SellerAuthProvider>
+      <CartProvider>
       <AuthProvider>
       <div>
         <Routes>
           <Route path="/products" element={<AllProducts />} />
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/about-us" element={<AboutUs/>} />
-          <Route path="/help" element={<Help/>} /> 
+          <Route path="/help" element={<Help/>} />
           <Route path="/contact-us" element={<ContactUs/>} />
           <Route path="/terms" element={<Terms/>}/>
           <Route path="/productsgrid" element={<ProductGrid/>}/>
@@ -48,16 +51,19 @@ function App (){
           <Route path="electronics-and-accessories/" element={<ElectronicsAndAccessories/>}/>
           <Route path="/login" element={<Login/>}/>
           <Route path="/signup" element={<Signup/>}/>
-          <Route path="/register" element={<Register/>}/>
-          <Route path="/SignIn" element={<SignIn/>}/>
           <Route path="/" element={<Homepage/>}/>
+          <Route path="/cart" element={<Cart/>}/>
+          <Route path="/SignIn" element={<SignIn/>}/>
+          <Route path="/SellerNav" element={<SellerNav/>}/>
+          <Route path="/product_form" element={<AddProductForm/>}/>
+          <Route path="/seller" element={<Sellers/>}/>
+          <Route path="/register" element={<Register/>}/>
         </Routes>
       </div>
       </AuthProvider>
+      </CartProvider>
       </SellerAuthProvider>
     </Router>
-    
   );
 };
-
 export default App;

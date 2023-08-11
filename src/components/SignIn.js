@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { SellerAuthContext } from './SellerAuthContext';
+import TopLayout from './TopLayout';
 
 function SignIn() {
   const { SignIn } = useContext(SellerAuthContext);
@@ -15,9 +16,11 @@ function SignIn() {
   };
 
   return (
-    <div className="" style={{ backgroundImage: `url('./bg2.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <>
+    <TopLayout/>
+    <div className="background">
       {/* ... Other JSX code ... */}
-      <div className=" flex flex-col min-h-screen items-center ">
+      <div className="login-form">
         <form onSubmit={handleSubmit} className="flex flex-col pt-10 px-4 py-5 bg-white border-2 border-blue-900 mt-20 rounded">
           <h1 className="text-2xl font-bold text-left pb-3">SignIn</h1>
           <label className="py-2 font-semibold">Email</label>
@@ -46,6 +49,7 @@ function SignIn() {
         </form>
       </div>
     </div>
+    </>
   );
 }
 

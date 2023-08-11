@@ -53,7 +53,7 @@ export default function AuthProvider({ children }) {
             showConfirmButton: false,
             timer: 1500,
           });
-          navigate("/seller/dashboard");
+          navigate("/Seller");
 
         }
       });
