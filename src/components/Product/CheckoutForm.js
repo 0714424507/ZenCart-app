@@ -59,8 +59,15 @@ const CheckoutForm = ({ onCheckout }) => {
           Phone Number:
           <input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} required />
         </label>
-        <button type="submit">Proceed to Pay</button>
+        <label>
+          Mpesa confirmation code:
+          <input type="tel" name="mpesa confirmation" value={formData.phoneNumber} onChange={handleChange} required />
+        </label>
+        <h1>LIPA NA MPESA TO TILL NUMBER 5244061(ZENCART)</h1>
+        <button type="submit">Place order</button>
+      
       </form>
+    
     </div>
   );
 };
