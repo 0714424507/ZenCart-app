@@ -16,9 +16,12 @@ const ProductGrid = () => {
       .catch((error) => console.error('Error fetching products:', error));
   }, []);
 
+
   return (
+    <div>
     <div className="suggested-products">
-      <div className='homepage-grid'>
+      <a href="/products" className="see-all-button">SEE ALL <i class="fas fa-arrow-right"></i></a>
+      <div  className='homepage-grid'>
         {products.map(product => (
           <div key={product.id} className="products-8">
             <Link className='link-8' to={`/products/${product.id}`}>
@@ -32,6 +35,7 @@ const ProductGrid = () => {
           </div>
         ))}  
       </div>
+    </div>
     </div>
   );
 };
