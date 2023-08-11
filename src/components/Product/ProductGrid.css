@@ -42,9 +42,6 @@
   font-weight: bold;
 }
 
-
-
-/* ALL PRODUCTS  */
 .see-all-button {
   width: 20px;
   margin-top: px;
@@ -74,16 +71,117 @@
   padding-bottom: 15px;
   margin-left: 4%;
 }
-.products-2 {
-  text-align: center;
-  /* box-shadow: 3px 2px rgb(206, 204, 204); */
-}
-
-.homepage-grid2 {
+/* ALL PRODUCTS  */
+.homepage-grid2{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-  max-width: 1000px;
-  margin-left: 27%;
-  margin-top: -428px;
+  gap: 40px;
+  margin-left: 28.5%;
+  margin-top: -30%;
+  padding-right: 20px;
+}
+
+.products-2 {
+  max-width: 350px;
+  max-height: 300px;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.products-2 img {
+  width: 150px;
+  max-height: 160px;
+  object-fit: fill;
+}
+
+.link-8 {
+  color: #333;
+  text-decoration: none;
+}
+
+.price-8 {
+  color: #000000;
+  margin-top: 10px;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  width: 300px;
+  z-index: 1000;
+  animation: fadeOut 80s ease-in-out;
+}
+@keyframes fadeOut {
+  0%, 100% {
+    opacity: 1;
+  }
+  80%, 95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notification-close {
+  color: #999;
+  cursor: pointer;
+}
+
+.notification-title {
+  margin: 0;
+  font-size: 18px;
+  color: rgb(9, 88, 144);
+}
+
+.notification-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.notification-media {
+  margin-right: 10px;
+}
+
+.notification-reaction {
+  color: #f85700;
+  font-size: 24px;
+}
+
+.notification-content {
+  flex-grow: 1;
+}
+
+.notification-text {
+  margin: 0;
+  color: #333;
+}
+
+.notification-timer {
+  font-size: 12px;
+  color: #104971;
+}
+
+.notification-status {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #f80057;
+  margin-left: 10px;
 }

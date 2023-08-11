@@ -58,7 +58,7 @@ function Homepage({categoryId}) {
           <ProductGrid />
         </div>
         <div className='grid-pets'>
-          <h2 className='gird-title'>Health & <br/> Beauty</h2>
+          <h2 className='gird-title'>Health & <br/><span> Beauty</span></h2>
           <div className='grid-p'>
         {firstTwoProducts.map(product => (
           <div key={product.id} className='grid-id'>

@@ -37,10 +37,6 @@ function AllProducts(){
                 ))}  
             </div>
                 <div className="notification">
-                <div className="notification-header">
-                    <h3 className="notification-title">New notification</h3>
-                    <i className="fa fa-times notification-close"></i>
-                </div>
                 <div className="notification-container">
                     <div className="notification-media">
                     {/* <img src="https://i.pinimg.com/474x/48/57/b5/4857b5ff639a34c700929609ac8c25b0.jpg" alt="" className="notification-user-avatar"/> */}
@@ -53,7 +49,7 @@ function AllProducts(){
                         zen<span>cart</span>
                         </h1>
                     </strong>, */}
-                    <strong>New Arrivals</strong> and so much more @ <strong>20% OFF! Don't be left behind</strong>
+                    <strong>Thank you for visiting our page!<br/></strong> We're thrilled to have you here. 🛍️<br/><strong>Enjoy your shopping experience and discover amazing treasures!</strong>
                     </p>
                     <span className="notification-timer">a few seconds ago</span>
                     </div>
