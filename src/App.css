@@ -328,177 +328,143 @@ margin-left: 40px;
   font-weight: bold;
 }
 
-/* .shopnow{
-  background: radial-gradient(
-    circle farthest-corner at 30% 20% ,
-    #e75a14,
-    #eb0d8b,
-    #e75a14
-  );
-  margin-left: 70%;
-  margin-top: -180px;
-  font-size: 60px;
-  color: white;
-  font-weight: bolder;
-} */
-
-/* Add this section to your existing CSS */
 
 /* CART */
-.cart-container {
-  margin-top: 20px;
+.your-cart{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 35px;
+  color: #b7b7b7;
 }
-
-.cart-header {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
+.inside-cart ul {
+  list-style: none;
+  margin: 0;
+  max-width: 90%;
+  margin-left: 5%;
+  max-width: 900px;
 }
-
 .cart-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  margin-bottom: 10px;
+  border-left: 3px solid black;
 }
-
-.product-image {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  margin-right: 20px;
+.cart-product-image{
+  float: left; width: 8%;
 }
-
-.product-info {
-  flex: 1;
+.cart-product-name{
+  margin-left: 10%; width: 37%; margin-top: -5px;text-align: left;
+  margin-bottom: -10px; font-weight: bold;
 }
-
-.product-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
+.cart-product-des{
+  margin-left: 10%; width: 37%; margin-left: 10%; 
+  font-size: 17px;
 }
-
-.product-price {
-  font-size: 16px;
-  color: #e87968;
-}
-
-.quantity-control {
+.cart-product-price { 
+  margin-left: 46%; width: 12%; margin-top: -72px;
+  font-size: 15px;
+ }
+ .quantity-control{
   display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.quantity-control button {
-  background-color: #e87968;
-  color: white;
+  justify-content: center;
+  padding: 1px;
+  width: 90px;
+  border-radius: 4px;
+  margin-left: 59%;
+  margin-top: -45px;
+ }
+ .quantity-control button{
+  max-height: 19px;
+  margin-top: 3px;
   border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.product-quantity {
-  margin: 0 10px;
-  font-size: 18px;
-}
-
-.remove-button {
-  background-color: #f80057;
+  background-color: white;
+  font-weight: bolder;
+  font-size: 16px;
+  text-decoration: underline #e80057;
+ }
+ .quantity-control button:hover{
+  color: #e80057;
+ }
+ .cart-product-quantity{
+    display: flex;
+    align-items: center;
+    padding: 10px 13px;
+    margin-top: -10px;
+    font-size: 16px;
+ }
+ .remove-button{
+  margin-left: 58%;
+  border-color: #e75a14;
   color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-size: 14px;
-  cursor: pointer;
-}
+  background-color: #e75a14;
+  font-weight: bold;
+ }
+ .remove-button:hover{
+  background-color: white;
+  color:#e75a14 ;
+ }
 
 .cart-summary {
-  margin-top: 20px;
-  text-align: right;
+  border: 1px solid #e0e0e0;
+  padding: 17px;
+  background-color: white;
+  max-width: 16%;
+  margin-left: 77%;
+  margin-top: -120px;
 }
-
-.total-items {
-  font-size: 16px;
+.cart-summary h1{
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.cart-summary p {
+  margin: 5px 0;
   margin-bottom: 10px;
+  text-align: justify;
+  font-weight: 600;
 }
 
-.subtotal {
-  font-size: 18px;
-  font-weight: bold;
-  color: #e87968;
+.cart-summary span{
+  margin-left: 37px;
+  text-align: left;
+  font-weight: 300;
 }
-
-.checkout-buttons {
-  margin-top: 20px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
 .checkout-button {
-  background-color: #e87968;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .cart-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .product-image {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .product-info {
-    text-align: center;
-  }
-}
-.remove-button {
   background-color: #f80057;
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-size: 14px;
+  padding: 5px 15px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  margin-right: 10px;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
 }
-
-.remove-button:hover {
-  background-color: #e80057; /* Slightly lighter shade on hover */
-  transform: scale(1.05); /* Slightly larger size on hover */
+.checkout-button:hover{
+  background-color: white;
+  color: #e80057;
+  border: 1px solid #e80057;
 }
-
 .clear-cart-button {
-  background-color: #f80057;
-  color: white;
+  color: rgb(143, 141, 141);
+  box-shadow: 2px  rgb(143, 141, 141);
   border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 5px 15px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+.clear-cart-button:hover{
+  color: white;
+  background: #000000;
 }
 
-.clear-cart-button:hover {
-  background-color: #e80057; /* Slightly lighter shade on hover */
-  transform: scale(1.05); /* Slightly larger size on hover */
-}
 /* NAVBAR DROPDOWN */
 .dropdown {
   position: relative;
@@ -648,4 +614,57 @@ margin-left: 40px;
 .product-price-cat {
   color: #000000;
   margin-top: 10px;
+}
+
+.empty-cart {
+  text-align: center;
+  margin-top: -30px;
+  padding: 50px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.empty-cart p {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: lighter;
+}
+
+.empty-cart a {
+  display: inline-block;
+  background-color: #f80057;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.empty-cart a:hover {
+  background-color: #e6004c;
+}
+
+.empty-cart .fa-basket-shopping {
+  margin-left: 5%;
+  margin-top: -20px;
+  font-size: 64px;
+  color: #f80057;
+  margin-bottom: 10px;
+}
+
+.custom-buttom{
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+.popup-add{
+  box-shadow: rgba(246, 141, 141, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  font-size: 12px;
+  margin-top: 6px;
+  padding: 1px 3px;
 }
