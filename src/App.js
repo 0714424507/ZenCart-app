@@ -27,6 +27,7 @@ import Register from './components/Register';
 import SellerNav from './components/SellerDashboard/SellerNav';
 import AddProductForm from './components/SellerDashboard/AddProductForm';
 import Sellers from './components/SellerDashboard/Sellers';
+import UserProfile from './components/User/UserProfile';
 function App (){
   return (
     <Router>
@@ -58,6 +59,7 @@ function App (){
           <Route path="/product_form" element={<AddProductForm/>}/>
           <Route path="/seller" element={<Sellers/>}/>
           <Route path="/register" element={<Register/>}/>
+          <Route path='/user/:activepage' element={<UserProfile/>} />
         </Routes>
       </div>
       </AuthProvider>
