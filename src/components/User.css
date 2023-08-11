@@ -71,7 +71,8 @@
     line-height: 42px;
     text-align: center;
 }
-.signup-form label, 
+.signup-form label,
+.register-form label, 
 .login-form label{
     margin-left: 50px;
     padding-bottom: 2px;
@@ -97,6 +98,7 @@
 }
 
 .signup-form button, 
+.register-form button, 
 .login-form button{
     background-color: #ffffff;
     color: #080710;
@@ -109,5 +111,47 @@
     margin-left: 39%;
     border: 1px solid black;
 }
+
+.register-form{
+    height: 420px;
+    width: 400px;
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 60%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 10px rgba(8,7,16,0.6);
+    padding: 50px
+}
+
+.register-form input{
+    display: block;
+    height: 50px;
+    width: 70%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 50px;
+    justify-content: space-between;
+}
+::placeholder{
+    color: #c9c9c9;
+    font-style: italic;
+}
+
+.register-form h1{
+    font-size: 32px;
+    font-weight: bolder;
+    line-height: 42px;
+    text-align: center;
+    margin-top: -10px;
+}
+
 
 /* LOGIN */

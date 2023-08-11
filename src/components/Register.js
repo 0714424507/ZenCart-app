@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { SellerAuthContext } from './SellerAuthContext';
 import { Link } from 'react-router-dom';
+import TopLayout from './TopLayout';
 
 function Register() {
   const { register } = useContext(SellerAuthContext)
@@ -16,19 +17,16 @@ function Register() {
   };
 
   return (
-    <div className="" style={{ backgroundImage: `url('./bg2.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <>
+    <TopLayout/>
+    <div className="" >
       <div className="text-center">
-        <span className="font-bold text-black font-bold  text-2xl flex-shrink-0">
-          {/* <FontAwesomeIcon icon={faPlaneDeparture}  /> */}
-          <span className="ml-4">Zencart</span>
-        </span>
       </div>
-      <div className="flex flex-col min-h-screen items-center pb-10 ">
+      <div className="register-form">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col pt-10 px-4 py-5 bg-white border-2 border-gray-400 mt-20 rounded"
         >
-          <h1 className="text-2xl font-bold text-left pb-3">Register</h1>
+          <h1 cl>Register</h1>
           <label className="py-2 font-semibold">Name</label>
           <input
             value={name}
@@ -69,6 +67,7 @@ function Register() {
         </form>
       </div>
     </div>
+    </>
   );
 }
 

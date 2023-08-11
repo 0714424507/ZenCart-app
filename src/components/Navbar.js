@@ -37,34 +37,28 @@ const Navbar = () => {
   };
   return (
     <nav className="navbar">
-   <div className="navbar-button">
-        <div
-          className="sellerbar-link"
-          onClick={toggleDropdown}
-          onMouseEnter={toggleDropdown}
-          onMouseLeave={toggleDropdown}
-        >
-          <h3>Sell on ZenCart</h3>
+      <div className="dropdown">
+          <button className="dropdown-btn" onClick={toggleDropdown}>
+            <span>Sell on Zencart</span>
+            <span className="arrow"></span>
+          </button>
           {isDropdownOpen && (
-            <div className="dropdown-menu">
-              {!isLoggedIn ? (
+            <ul className="dropdown-content">
+              {isLoggedIn ? (
                 <>
-                  <Link className="dropdown-item" to="/SignIn">
-                    Sign In
-                  </Link>
-                  <Link className="dropdown-item" to="/register">
-                    Register
-                  </Link>
+                  <li><Link to="/register">Register </Link></li>
+                  <li><Link to="/signin">SignIn</Link></li>
+                  <li><button onClick={triggerLogout}>Logout</button></li>
                 </>
               ) : (
-                <Link className="sellerbar-link" to="/product_form">
-                <h3>Add product</h3>
-              </Link>
+                <>
+                  <li><Link to="/SignIn">SignIn</Link></li>
+                  <li><Link to="/register">Register</Link></li>
+                </>
               )}
-            </div>
+            </ul>
           )}
         </div>
-      </div>
       <ul className="navbar-list">
         <li>
           <Link className="helpbar-link" to="/help">
@@ -82,7 +76,7 @@ const Navbar = () => {
                 <>
                   <li><Link to="/signup">Sign Up</Link></li>
                   <li><Link to="/login">Log in</Link></li>
-                  <li><Link to="/user">My Account</Link></li>
+                  <li><Link to="/user/accountsettings">Profile</Link></li>
                   <li><button onClick={triggerLogout}>Logout</button></li>
                 </>
               ) : (
@@ -98,5 +92,4 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;
